@@ -1,3 +1,11 @@
+
+/**
+ 判断parentStr中有多少个subStr
+
+ @param parentStr 字符串
+ @param subStr 字符串
+ @return 个数
+ */
 unsigned int  subStr(const string &parentStr,const string &subStr){
     unsigned int num = 0;
     const char *pStr   = parentStr.c_str();
