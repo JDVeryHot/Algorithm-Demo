@@ -17,7 +17,10 @@ typedef  struct mapKey{
     int index; //数组索引
     
     bool operator<(const mapKey & p) const{
-        return (index * maxWeight) < (p.index * p.maxWeight);
+        if(maxWeight == p.maxWeight){
+            return index < p.index;
+        }
+        return maxWeight < p.maxWeight;
     }
     
 }mapKey;
@@ -90,7 +93,7 @@ int main(int argc, char * argv[]) {
     
     printArry();
     
-    double maxWeight = 2;
+    double maxWeight = 8;
     
     printf("总重量不超过%lf---的最大价值为:%f",maxWeight,maxValue(maxWeight, COUNT-1));
     
